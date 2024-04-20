@@ -1,0 +1,190 @@
+ body 					{background-color:grey;
+						}
+						
+.page-content			{			
+						flex-direction:column;
+						align-items:center;
+						}
+ 
+ .mdl-layout__drawer 	{background-color:white;
+						border-color:darkgrey;
+						color:darkgrey;
+						}
+						
+.mdl-navigation__link 	{color: white;
+						}						
+						
+.vocbox					{background-color:white;
+						box-shadow: 4px 4px 14px black;
+						width:90%;
+						padding: 2% 2% 2% 2%;
+						margin: 4% 4% 4% 4%;
+						}
+
+						
+.vocboxbib				{background-color:lightgrey;
+						box-shadow: 4px 4px 14px black;
+						width:90%;
+						padding: 1% 2% 1% 2%;
+						margin: 1% 4% 1% 4%;
+						overflow: hidden;
+						display:inline-block;
+						}
+						
+						}						
+						
+.vocbox button			{margin-right: 0px;
+						margin-left: auto;
+						}
+						
+#vocabularyList			{width: 100%;
+						}
+						
+.voclist				{ display:inline-block; }	
+
+.vocbutton				{width: 30px; }	
+.voctext				{width: 43.5%; }				
+						
+#word2					{font-family:cursive;
+						text-decoration-thickness: 25%;
+						}	
+.action					{display:flex;
+						justify-content: center;
+						}
+
+h1, h2					{font-family: "Roboto","Helvetica","Arial",sans-serif;
+						font-size: 30px;
+						line-height: 1;
+						letter-spacing: .02em;
+						font-weight: 400;
+						box-sizing: border-box;}	
+						
+p 						{font-family: "Roboto","Helvetica","Arial",sans-serif;
+						line-height: 1;
+						letter-spacing: .02em;
+						font-weight: 400;
+						box-sizing: border-box;}
+
+#switch-2				{margin-right: 4px;}
+
+.addvoc					{}
+#switchirregular	p	{margin-top:10px;margin-bottom:0;}
+#knopfadd	p			{margin-top:20px;margin-bottom:0;}
+.addvoc	div				{margin-bottom:0px;
+						margin-top:2px;}
+
+#switchirregular		{column-count: 2; display:none;}
+
+#knopfadd				{column-count: 2;}
+
+#irreg 					{ display: none;}
+
+.showmorestyle			{display:none;}
+.showmorebutton			{background-color:red;}
+#searchfield			{margin-left: 5%}
+
+#VocTrainer				{margin-right: 3px;}
+
+#Deletebutton		{Width:30px; display:inline-block; padding-left:2px; padding-right:2px}
+
+#Grammartrainer			{background-color: lightgrey}
+#Grammartrainer:hover	{background-color: grey; color:white;}
+
+.grammarpoint 			{
+						display:inline-block;
+						min-width:100px;
+						max-width:300px;
+						width:30%;
+						max-height:300px;
+						min-height:50px;
+						aspect-ratio : 1 / 1;
+						background-color:#eee;
+						text-align:center;
+						margin: 3px 3px 3px 3px;
+						overflow: hidden;
+						}
+.grammarpoint p 		{padding-top:40%; font-size:100%}
+
+
+.grammarpoint:hover 	{
+						box-sizing:border-box;
+						background-color:lightgrey}
+
+.hiddenmenustyle		{background-color: lightgrey;}
+.optionmenu	div			{width:100%}
+.optionmenu				{margin-right:5%}
+#optionmenuband			{background-color: grey; box-shadow: 0px -3px 2px rgba(0,0,0,.14);}
+
+.bar > rect {
+	width: 9%;
+	height: calc((var(--value)/3.5) * 10px);
+	x: calc(var(--n) * 10%);
+	y: calc((30 - (var(--value)/3.5)) * 10px);
+}
+
+.bar {
+	fill: var(--color);
+	stroke: var(--black);
+	stroke-width: 1.5;
+	transition: fill .3s ease;
+	cursor: pointer;
+}
+
+.bar:nth-of-type(1) {
+	--n: 0;
+}
+
+.bar:nth-of-type(2) {
+	--n: 1;
+}
+
+.bar:nth-of-type(3) {
+	--n: 2;
+}
+
+.bar:nth-of-type(4) {
+	--n: 3;
+}
+
+.bar:nth-of-type(5) {
+	--n: 4;
+}
+
+.bar:nth-of-type(6) {
+	--n: 5;
+}
+
+.bar:nth-of-type(7) {
+	--n: 6;
+}
+
+.bar:nth-of-type(8) {
+	--n: 7;
+}
+
+.bar:nth-of-type(9) {
+	--n: 8;
+}
+
+.bar:nth-of-type(10) {
+	--n: 9;
+}
+
+.bar > text {
+	color:black;
+	font-size: 12px;
+	
+}
+
+svg {
+	height: 100%;
+	--bgcolor: #e6f2f7;
+	--blue: #337599;
+	--yellow: #dfac20;
+	--orange: #df6c20;
+	--green: #8db243;
+	--red: #c82f04;
+	--purple: #8c4bb4;
+	--black: #113;
+}
+.erklaerungstext {font-size:10px; margin:0px;}

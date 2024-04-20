@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="stylepares.css">
+	<script src="script.js"></script>
+	<script src="repscriptpares.js"></script>
+	<title>VocTrainer | PareGame</title>
+	
+</head>
+
+<body onload="buildgame(); return false">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" onclick="counterwiederholung ()">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+       <span id="VocTrainer" class="mdl-layout-title">VocTrainer </span>
+	  <span> | PareGame</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <!-- <a class="mdl-navigation__link" href="">Link</a>-->
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Vokabeltrainer</span>
+     <nav class="mdl-navigation">
+	  <a id="wiederholung11" onclick="showrepetitionmenu ()" class="mdl-navigation__link">Wiederholung</a>
+		<nav id="repetitionmenu" class="hidden">
+		<a class="mdl-navigation__link hiddenmenustyle" href="reppares.html">Paare finden</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="repremember.html">Erinnern</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="reptest.html">Schreibtest</a>
+		</nav>
+		<a id="freieswiederholen" onclick="showfreieswiederholen ()" class="mdl-navigation__link">Freies Wiederholen</a>
+		<nav id="freieswiederholenmenu" class="hidden">
+		<a class="mdl-navigation__link hiddenmenustyle" href="freereplearn.html">Lernen</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freerepremember.html">Erinnern</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freereppares.html">Paare finden</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freerepmemory.html">Memory Spiel</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freereptest.html">Schreibtest</a>
+		</nav>
+		<a id="freieslernen" onclick="showfreieslernen ()" class="mdl-navigation__link">Freies Lernen</a>
+		<nav id="freieslernmenu" class="hidden">
+		<a class="mdl-navigation__link hiddenmenustyle" href="learn.html">Lernen</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="remember.html">Erinnern</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="pares.html">Paare finden</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="memory.html">Memory Spiel</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="test.html">Schreibtest</a>
+		</nav>
+	  <a class="mdl-navigation__link" href="bibliothek.html">Bibliothek</a>
+	  <a class="mdl-navigation__link" href="statistic.html">Statistik</a>
+      <a class="mdl-navigation__link" href="add.html">Vokabeln Hinzufügen</a>
+	  <a class="mdl-navigation__link" href="import.html">Vokabeln importieren</a>
+	  <a class="mdl-navigation__link" href="grammartrainerhome.html" id="Grammartrainer">Grammatiktrainer</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+	
+	<div id="repparestext"></div>
+	<div id="spiel">
+	</div>
+	<p>License: Copyright Google, 2015. Licensed under an Apache-2 license | parts (sometimes modyfied) used from: https://getmdl.io/</p>
+	</div>
+  </main>
+</div>
+</body>
+</html>

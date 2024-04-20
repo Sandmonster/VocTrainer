@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<title>Bibliothek</title>
+	
+</head>
+
+<body onload="chartstufenrender();return false">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" onclick="counterwiederholung ()">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span id="VocTrainer" class="mdl-layout-title">VocTrainer </span>
+	  <span>| Steps</span>
+	   <span><input type="text" id="searchfield" onkeyup="search()" placeholder="Search.."></span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <!-- <a class="mdl-navigation__link" href="">Link</a>-->
+      </nav>
+    </div>
+	 <div id ="optionmenuband" class="mdl-layout__header-row hidden">
+      <!-- Title -->
+      <span class="optionmenu"><div onclick="deletemark()">Delete</div></span>
+	  <span class="optionmenu"><div onclick="stepupmark()">StepUp</div></span>
+	  <span class="optionmenu"><div onclick="stepdownmark()">StepDown</div></span>
+	  <span class="optionmenu"><div onclick="resetmark()">Reset</div></span>
+	  </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Vokabeltrainer</span>
+    <nav class="mdl-navigation">
+	  <a id="wiederholung11" onclick="showrepetitionmenu ()" class="mdl-navigation__link">Wiederholung</a>
+		<nav id="repetitionmenu" class="hidden">
+		<a class="mdl-navigation__link hiddenmenustyle" href="reppares.html">Paare finden</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="repremember.html">Erinnern</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="reptest.html">Schreibtest</a>
+		</nav>
+		<a id="freieswiederholen" onclick="showfreieswiederholen ()" class="mdl-navigation__link">Freies Wiederholen</a>
+		<nav id="freieswiederholenmenu" class="hidden">
+		<a class="mdl-navigation__link hiddenmenustyle" href="freereplearn.html">Lernen</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freerepremember.html">Erinnern</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freereppares.html">Paare finden</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freerepmemory.html">Memory Spiel</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="freereptest.html">Schreibtest</a>
+		</nav>
+		<a id="freieslernen" onclick="showfreieslernen ()" class="mdl-navigation__link">Freies Lernen</a>
+		<nav id="freieslernmenu" class="hidden">
+		<a class="mdl-navigation__link hiddenmenustyle" href="learn.html">Lernen</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="remember.html">Erinnern</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="pares.html">Paare finden</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="memory.html">Memory Spiel</a>
+		<a class="mdl-navigation__link hiddenmenustyle" href="test.html">Schreibtest</a>
+		</nav>
+	  <a class="mdl-navigation__link" href="bibliothek.html">Bibliothek</a>
+	  <a class="mdl-navigation__link" href="statistic.html">Statistik</a>
+      <a class="mdl-navigation__link" href="add.html">Vokabeln Hinzufügen</a>
+	  <a class="mdl-navigation__link" href="import.html">Vokabeln importieren</a>
+	  <a class="mdl-navigation__link" href="Grammartrainer/grammartrainerhome.html" id="Grammartrainer">Grammatiktrainer</a>
+	  
+    </nav>
+  </div>
+  
+  <main class="mdl-layout__content">
+    <div class="page-content">
+	
+	<div class="vocbox">
+	<h1>Stufenfortschritt</h1>
+
+		<svg id="chartstufen" class="chart" width="100%" height="100%" aria-labelledby="chartinfo" viewBox="0 0 300 300">
+		</svg>
+	</div>
+	<div id="newwords" class="vocbox"></div>
+	<div id="learnedwords" class="vocbox"></div>
+	
+			<div class="vocbox">
+			<h2>Wähle die gewünschte Stufe ...</h2> 
+			<button onclick="renderstufe(undefined)" style="font-size:10px"class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">neu</button>
+			<button onclick="renderstufe(1)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">1</button>
+			<button onclick="renderstufe(2)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">2</button>
+			<button onclick="renderstufe(3)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">3</button>
+			<button onclick="renderstufe(4)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">4</button>
+			<button onclick="renderstufe(5)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">5</button>
+			<button onclick="renderstufe(6)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">6</button>
+			<button onclick="renderstufe(7)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">7</button>
+			<button onclick="renderstufe(8)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">8</button>
+			<button onclick="renderstufe(9)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">9</button>
+			<button onclick="renderstufe(10)" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">10</button>
+			<button onclick="renderstufe(10)" style="font-size:8px" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab">gelernt</button>
+			</div>
+		<div id="vocabularyList">
+		</div>
+		<p>License: Copyright Google, 2015. Licensed under an Apache-2 license | parts (sometimes modyfied) used from: https://getmdl.io/</p>
+	</div>
+  </main>
+</div>
+</body>
+</html>
